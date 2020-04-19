@@ -41,6 +41,19 @@ class ParkingLot {
                     log(`Allocated slot number: ${index + 1}`)
                 }
                 break;
+            case 'leave':
+                const slot = this.lot.indexOf(arg1);
+                if (slot === -1) {
+                    log(`Registration number ${arg1} not found`)
+                } else {
+                    this.lot[slot] = null;
+    
+                    const fee = 10 + (+arg2 - 2) * 10;
+    
+                    log(`Registration number ${arg1} with Slot Number ${slot + 1} is free with Charge ${fee}`);
+                }
+
+                break;
             default:
                 log('Broken command');
         }
