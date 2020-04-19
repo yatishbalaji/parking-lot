@@ -4,7 +4,9 @@
   "description": "Parking lot",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/index.js",
+    "test": "mocha functional_spec/spec/end_to_end.spec.js",
+    "test-parking": "mocha functional_spec/spec/end_to_end.spec.js -g 'can create a parking lot'"
   },
   "keywords": [
     "Parking",
@@ -15,5 +17,9 @@
   "license": "MIT",
   "dependencies": {
     "commander": "^5.0.0"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^7.1.1"
   }
 }
