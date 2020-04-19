@@ -55,12 +55,12 @@ class ParkingLot {
 
                 break;
             case 'status':
-                console.log('Slot No.  Registration No.');
+                console.log('Slot No.    Registration No.');
 
                 for (let i = 0; i < this.lot.length; i++) {
                     const vehNo = this.lot[i];
                     if (vehNo) {
-                        console.log(`${i + 1}  ${vehNo}`);
+                        console.log(`${i + 1}           ${vehNo}`);
                     };
                 }
                 break;
