@@ -32,6 +32,15 @@ class ParkingLot {
                 log(`Created parking lot with ${arg1} slots`)
                 this.lot = new Array(+arg1).fill(null);
                 break;
+            case 'park':
+                const index = this.lot.indexOf(null);
+                if (index === -1) {
+                    log('Sorry, parking lot is full');
+                } else {
+                    this.lot[index] = arg1;
+                    log(`Allocated slot number: ${index + 1}`)
+                }
+                break;
             default:
                 log('Broken command');
         }
